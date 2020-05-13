@@ -9,4 +9,7 @@ import java.util.List;
 public interface UserMapper {
 
     public List<User> queryUserList();
+
+    User login(String username, String password);
+
 }

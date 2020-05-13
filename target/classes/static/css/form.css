@@ -1,0 +1,36 @@
+.user-form {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.user-form-item {
+    margin-bottom: 25px;
+}
+
+.user-form-item .user-input {
+    line-height: 38px;
+    height: 38px;
+    font-size: 17px;
+
+    box-shadow: 0 0 1px #000;
+    border-color: #09F;
+
+    width: 298px;
+    padding: 0 15px;
+    transition: box-shaodw .235s linear;
+    -webkit-transition: box-shaodw .235s linear;
+    -moz-transition: box-shaodw .235s linear;
+}
+
+.user-form-item .user-form-button {
+    line-height: 38px;
+    height: 38px;
+    font-size: 17px;
+
+    width: 328px;
+    text-align: center;
+    color: #fff;
+    background: #fb3268;
+    border-radius: 5px;
+    border: 1px solid #e04040
+}

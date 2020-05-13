@@ -1,12 +1,12 @@
 package com.test1.domain;
 
 public class User {
-    private Integer id;
+    private long id;
     private String username;
     private String password;
     private String name;
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
