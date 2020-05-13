@@ -1,15 +1,16 @@
 package com.test1.mapper;
 
 import com.test1.domain.User;
-import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-@Mapper
+@Repository
 public interface UserMapper {
 
-    public List<User> queryUserList();
-
     User login(String username, String password);
+
+
+    void register(String username, String password, String email);
+
+    User selectByName(String username);
 
 }

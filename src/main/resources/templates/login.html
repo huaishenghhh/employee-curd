@@ -10,7 +10,7 @@
 <body>
 <div class="user-form">
     <p th:text="${msg}" style=" color: red;padding:15px 0;"></p>
-    <form method="post" action="/user/login">
+    <form method="get" action="/user/login">
         <div class="user-form-item">
             <input class="user-input" type="text" name="username" max="15" maxlength="15" placeholder="用户名">
         </div>
@@ -25,6 +25,7 @@
         <div class="user-form-item">
             <a href="/register.html">注册账号</a>
         </div>
+
     </form>
 </div>
 </body>

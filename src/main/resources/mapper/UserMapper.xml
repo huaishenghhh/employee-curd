@@ -4,10 +4,10 @@
 <mapper namespace="com.test1.mapper.UserMapper">
     <resultMap id="userMap" type="User">
         <!--id是主键，property是实体类的属性名 column是表的字段名 javaType是类型-->
-        <id property="id" column="id" javaType="java.lang.Long"/>
-        <result property="username" column="username"/>
-        <result property="password" column="password"/>
-        <result property="name" column="name"/>
+<!--        <id property="id" column="id" />-->
+<!--        <result property="username" column="username"/>-->
+<!--        <result property="password" column="password"/>-->
+<!--        <result property="name" column="name"/>-->
     </resultMap>
 
     <select id="queryUserList" resultType="user">select * from user</select>
@@ -15,5 +15,13 @@
 
     <select id="login" parameterType="java.lang.String" resultMap="userMap">
         select * from user where username = #{0} and password = #{1}
+    </select>
+
+    <!--实现数据库插入功能-->
+    <insert id="register" parameterType="java.lang.String">
+        insert into user(username,password,name) values (#{username},#{password},#{name})
+    </insert>
+    <select id="selectByName" parameterType="java.lang.String" resultMap="userMap">
+        select * from user where name = #{username}
     </select>
 </mapper>

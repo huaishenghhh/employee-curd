@@ -11,8 +11,13 @@ public class PageController {
         return "login";
     }
 
+    @GetMapping("/register.html")
+    public String register() {
+        return "register";
+    }
+
     @GetMapping("/index.html")
-    public String index() {
+    public String index(){
         return "index";
     }
 }

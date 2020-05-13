@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+
     private UserMapper userMapper;
 
 
@@ -17,4 +17,20 @@ public class UserServiceImpl implements UserService {
     public User login(String username, String password) {
         return userMapper.login(username, password);
     }
+
+    @Override
+    public void register(String username,String password,String name) {
+        userMapper.register(username,password,name);
+    }
+
+    @Override
+    public User selectByName(String username) {
+        return userMapper.selectByName(username);
+    }
+
+    @Autowired
+    public void setUserMapper(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
+
 }
