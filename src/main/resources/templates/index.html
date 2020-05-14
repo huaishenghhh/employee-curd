@@ -8,28 +8,30 @@
 </head>
 <body>
 <div class="user-info">
-    <table class="user-table">
-        <tr>
-            <th>员工Id</th>
-            <th>员工账号</th>
-            <th>员工姓名</th>
-        </tr>
-        <tr>
-            <td>
-                <span th:text="${user.id}"></span>
-            </td>
-            <td>
-                <span th:text="${user.username}"></span>
-            </td>
-            <td>
-                <span th:text="${user.name}"></span>
-            </td>
-        </tr>
+    <div>
+        <table class="user-table">
+            <tr>
+                <th>员工Id</th>
+                <th>员工账号</th>
+                <th>员工姓名</th>
+            </tr>
+            <tr>
+                <td>
+                    <span th:text="${user.id}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.username}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.name}"></span>
+                </td>
+            </tr>
 
-    </table>
-    <div class="user-form-item">
-        <a href="/">返回登录</a>
+        </table>
     </div>
+</div>
+<div class="user-return-login">
+    <a href="/">返回登录</a>
 </div>
 </body>
 </html>

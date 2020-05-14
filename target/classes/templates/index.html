@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>个人界面</title>
+    <title>详情</title>
+    <base th:href="${#request.getContextPath()+'/'}">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
+<div class="user-info">
+    <div>
+        <table class="user-table">
+            <tr>
+                <th>员工Id</th>
+                <th>员工账号</th>
+                <th>员工姓名</th>
+            </tr>
+            <tr>
+                <td>
+                    <span th:text="${user.id}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.username}"></span>
+                </td>
+                <td>
+                    <span th:text="${user.name}"></span>
+                </td>
+            </tr>
 
+        </table>
+    </div>
+</div>
+<div class="user-return-login">
+    <a href="/">返回登录</a>
+</div>
 </body>
 </html>

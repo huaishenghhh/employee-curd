@@ -1,10 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
+    <!-- 配置页面基础路径-->
+    <base th:href="${#request.getContextPath()+'/'}">
+    <link href="css/form.css" rel="stylesheet">
 </head>
 <body>
+<div class="user-form">
+    <form method="get" action="/user/register">
+        <p th:text="${msg}" style=" color: red;padding:15px 0;"></p>
+        <div class="user-form-item">
+            <input class="user-input" type="text" name="username" max="15" maxlength="15" placeholder="用户名">
+        </div>
+        <div class="user-form-item">
+            <input class="user-input" type="password" name="password" max="15" maxlength="15" placeholder="密码">
+        </div>
+        <div class="user-form-item">
+            <input class="user-input" type="text" name="name" max="15" maxlength="15" placeholder="姓名">
+        </div>
+        <div class="user-form-item">
+            <input type="submit" value="注册" class="user-form-button" >
+        </div>
 
+        <div class="user-form-item">
+            <a href="/">已有账号</a>
+        </div>
+    </form>
+</div>
 </body>
 </html>

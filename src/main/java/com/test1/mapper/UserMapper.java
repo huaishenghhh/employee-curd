@@ -8,7 +8,6 @@ public interface UserMapper {
 
     User login(String username, String password);
 
-
     void register(String username, String password, String name);
 
     User selectByName(String username);
