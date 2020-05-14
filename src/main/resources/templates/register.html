@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="user-form">
-    <form method="post" action="/user/register">
+    <form method="get" action="/user/register">
         <p th:text="${msg}" style=" color: red;padding:15px 0;"></p>
         <div class="user-form-item">
             <input class="user-input" type="text" name="username" max="15" maxlength="15" placeholder="用户名">
@@ -18,7 +18,7 @@
             <input class="user-input" type="password" name="password" max="15" maxlength="15" placeholder="密码">
         </div>
         <div class="user-form-item">
-            <input class="user-input" type="email" name="email" max="15" maxlength="15" placeholder="邮箱">
+            <input class="user-input" type="text" name="name" max="15" maxlength="15" placeholder="姓名">
         </div>
         <div class="user-form-item">
             <input type="submit" value="注册" class="user-form-button" >

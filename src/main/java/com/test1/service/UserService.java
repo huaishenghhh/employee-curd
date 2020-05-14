@@ -1,6 +1,5 @@
 package com.test1.service;
 
-
 import com.test1.domain.User;
 
 public interface UserService {

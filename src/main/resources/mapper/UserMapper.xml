@@ -12,14 +12,13 @@
 
     <select id="queryUserList" resultType="user">select * from user</select>
 
-
     <select id="login" parameterType="java.lang.String" resultMap="userMap">
         select * from user where username = #{0} and password = #{1}
     </select>
 
     <!--实现数据库插入功能-->
     <insert id="register" parameterType="java.lang.String">
-        insert into user(username,password,name) values (#{username},#{password},#{name})
+        insert into user(username,password,name) values (#{0},#{1},#{2})
     </insert>
     <select id="selectByName" parameterType="java.lang.String" resultMap="userMap">
         select * from user where name = #{username}
